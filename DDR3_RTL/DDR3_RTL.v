@@ -177,8 +177,9 @@ assign LED[7] =  heart_beat[23];
 
 reg [23:0] heart_beat;
 
-assign GPIO_0[0] = Debounce_KEY0;
-assign GPIO_0[1] = (ddr3_test_complete )?1'b1:1'b0;
+assign GPIO_1[0] = Debounce_KEY0;
+assign GPIO_1[1] = (ddr3_test_complete )?1'b1:1'b0;
+assign GPIO_1[2] = (ddr3_test_pass )?1'b1:1'b0;
 
 always @ (posedge FPGA_CLK2_50)
 begin

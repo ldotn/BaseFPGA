@@ -1,0 +1,7 @@
+{
+	"common_dir" : "C:/Research/BaseFPGA/DDR3_RTL/",
+	"acds_version" : "Version 20.1.0",
+	"platform" : "windows",
+	"os" : "Windows 10",
+	"qpf" : "DDR3_RTL.qpf"
+}

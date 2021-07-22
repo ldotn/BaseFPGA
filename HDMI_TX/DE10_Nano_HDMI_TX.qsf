@@ -7,7 +7,7 @@ set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEBA6U23I7
 set_global_assignment -name TOP_LEVEL_ENTITY "DE10_Nano_HDMI_TX"
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 14.0
-set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "TUE MAR  3 15:11:40 2015"
 set_global_assignment -name DEVICE_FILTER_PACKAGE UFBGA
 
@@ -482,6 +482,10 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 672
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE ../USB_Bridge/FPGA/usb_bridge.v
 set_global_assignment -name VERILOG_FILE vpg_source/vpg_mode.v
 set_global_assignment -name VERILOG_FILE vpg_source/vpg.v
 set_global_assignment -name SOURCE_FILE vpg_source/vpg.h
@@ -495,7 +499,4 @@ set_global_assignment -name SDC_FILE DE10_Nano_HDMI_TX.sdc
 set_global_assignment -name QIP_FILE pll/sys_pll.qip
 set_global_assignment -name QIP_FILE pll/pll_reconfig.qip
 set_global_assignment -name QIP_FILE pll/pll.qip
-set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
-set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name VERILOG_FILE I2C_WRITE_WDATA.v
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
